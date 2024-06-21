@@ -347,3 +347,9 @@ template {
 [hidden] {
   display: none;
 }
+
+
+/* Cancel Google Chrome inline start*/
+ul {
+  padding-inline-start: 0px;
+}  
