@@ -1,6 +1,13 @@
 /* main style */
-body {
+html {
+    max-width: 1200px;          /*Max screen width*/
+}
+
+* {
     box-sizing: border-box;
+}
+
+body {
     font-family: Georgia, serif;
 }
 
@@ -16,7 +23,7 @@ header {
     margin-bottom: 0;
     border: 0;
     height: 45px;
-    background-color: transparent;
+    background-color: transparent; /* Set the color of trigger button to transparent*/
 }
 
 #trigger:hover {
@@ -27,12 +34,23 @@ div {
     width: 30px;
     height: 1.5px;
     background-color: black;
-    margin: 8px 0;  /* Why does sometimes one of divs look thicker?*/
+    margin: 8px 0;  /* Not sure why sometimes one of divs looks thicker*/
   }
+  
+.menu {
+    display: none;
+}
+
+.item {
+    padding-left: 30px;
+    padding-right: 30px;
+    list-style: none;
+}
 
 #welcome {
     margin: 0;
     padding: 100px 50px;
+    height: 250px;
     background-color: #CDE;
     color: black;
     text-align: center;
@@ -51,18 +69,16 @@ div {
 .content {
     margin: 0 20px;
 }
+
 .box {
+    border-radius: 15px;          /*Rounded corner*/
     margin-top: 0px;              /*May need to resize*/
     margin-bottom: 15px;
     padding: 10px 15px;
-    height: 150px;
+    height: 250px;
     background-color: #8B98A8;
     text-align: center;
     list-style: none;
-}
-
-.menu_item {
-    display: none;
 }
 
 #call {
@@ -77,16 +93,20 @@ div {
 #call:hover {
     cursor: pointer;
 }
+
+
 /* Flexbox */
 
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .content {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .box {
@@ -96,13 +116,26 @@ header {
 /* Media Queries */
 
 @media screen and (min-width: 500px) {
-    
+    .content {
+        flex-direction: row;
+    }
+    .box {      
+        flex-basis: calc((100% - 60px) / 2); /*(100vw - 20px - 60 px)/2 not working*/
+        margin: 0 15px 20px 15px;
+    }
 }
 
 @media screen and (min-width: 800px){
+    header {
+        display: flex;
+    }
 
-}
+   #trigger {
+    display: none;
 
-@media screen and (min-width: 1200px){
-
+   } 
+   .menu {
+    display: flex;
+    flex: 2;
+   }
 }
