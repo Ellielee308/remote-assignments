@@ -42,8 +42,8 @@ body {
     margin: 8px 0;  /* Not sure why sometimes one of divs looks thicker*/
 }
 
-.logo {
-    width: 180px;
+#topbar .logo {
+    height: 3em;
 }
 
 .menu {
@@ -95,17 +95,23 @@ body {
     background-color: #1a73e7;
     color: white;
     font-size: 14px;
+    text-align: center;
 }
 
 #io_banner {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: calc (100vh - 60px); 
-    /* Still need to get the height of the small banner*/
+    height: calc (100vh - 60px - 66px); 
     align-items: center;
     margin: 0;
     background-color: #EDEEED;
+}
+
+#io_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #io_banner h1{
@@ -140,7 +146,7 @@ body {
 }
 
 #io_banner img {
-    width: 45%;
+    width: 100%;
     margin-top: auto;
 }
 
@@ -225,6 +231,7 @@ body {
 #start_item {
     display: flex;
     flex-direction: column;
+    width: 90vw;
 }
 
 #start_item .item {
@@ -233,7 +240,6 @@ body {
     border: solid 1px grey;
     border-radius: 5px;
     flex-grow: 1;
-    width: 80vw;
     margin-top: 0;
     margin-bottom: 15px;
     text-align: center;
@@ -277,6 +283,7 @@ body {
 .deve_focus {
     display: flex;
     flex-direction: column;
+    width: 90vw;
 }
 
 .focus {
@@ -286,7 +293,6 @@ body {
     border-radius: 5px;
     padding: 10px;
     flex-grow: 1;
-    width: 80vw;
     margin-top: 0;
     margin-bottom: 15px;
     text-align: left;
@@ -317,12 +323,16 @@ body {
 #trending_news_title { /*Should be at the left side*/
     font-size: 24px;
     color: black;
+    align-self: flex-start;
+    margin-left: 5vw;
 }
 
 .news_container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
+    width: 90vw;
 }
 
 .news {
@@ -332,7 +342,6 @@ body {
     border-radius: 5px;
     padding: 10px;
     flex-grow: 1;
-    width: 80vw;
     margin-top: 0;
     margin-bottom: 15px;
     text-align: left;
@@ -360,6 +369,12 @@ body {
 
 #new_android img {
     width: 100%;
+    border-radius: 10px;
+}
+
+#android_studio {
+    display: flex;
+    flex-direction: column;
 }
 
 #new_android h4 {
@@ -393,8 +408,10 @@ body {
     margin-top: 20px;
     padding-top: 30px;
     padding-bottom: 15px;
+    width: 100vw;
     background-color: #E8F0FE;
     justify-content: center;
+
 }
 
 .activity {
@@ -404,9 +421,9 @@ body {
     border: solid 1px grey;
     border-radius: 5px;
     padding: 10px;
-    width: 80vw;
     margin-top: 0;
     margin-bottom: 15px;
+    width: 90vw;
     text-align: left;
 }
 
@@ -444,6 +461,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
 }
 
 .social_media {
@@ -453,9 +471,9 @@ body {
     border: solid 1px grey;
     border-radius: 5px;
     padding: 10px;
-    width: 80vw;
     margin-top: 0;
     margin-bottom: 15px;
+    width: 90vw;
     text-align: left;
 }
 
@@ -487,9 +505,9 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    width: 80vw;
     margin-top: 0;
     margin-bottom: 15px;
+    width: 90vw;
     text-align: left;
 }
 
@@ -505,21 +523,22 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-#footer_nav_link img {
-    height: 3em;
-    align-self: flex-start;
 }
 
 #footer_nav_link {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    width: 80vw;
     margin-top: 0;
+    width: 90vw;
     text-align: left;
     line-height: 2em;
+}
+
+#footer_nav_link img {
+    height: 3em;
+    align-self: flex-start;
 }
 
 #footer_nav_link a{
@@ -538,9 +557,9 @@ footer {
     flex-direction: column;
     padding: 10px;
     align-items: flex-start;
-    width: 80vw;
     margin-top: 0;
     text-align: left;
+    width: 90vw;
 }
 
 .footer_last p a {
@@ -571,4 +590,182 @@ footer {
 #footer_language {
 
     margin-top: 15px;
+}
+
+
+/* media queries */
+@media screen and (min-width: 1200px){
+    #trigger {
+        display: none;
+    }
+    .menu {
+        display: block;
+        font-size: 10px;
+        color: grey;
+        text-align: center;
+
+    }
+    #keyword_search{
+        display: block;
+    }
+    #search_logo {
+        display: none;
+    }
+    #language {
+        display: block;
+        margin-left: 10px;
+    }
+    #topbar .logo{
+        margin-right: auto;
+    }
+
+    #io_banner {
+        flex-direction: row;
+        width: 100%;
+        height: calc(100vh - 60px - 66px);
+        padding-left: 150px;
+        padding-right: 150px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #io_text{
+        align-items: flex-start;
+        flex-grow: 1;
+    }
+
+    #io_baner_img{
+        flex-grow: 1;
+    }
+
+
+    #io_banner h1,
+    #io_banner p{
+        text-align: start;
+    }
+
+    #io_banner h1{
+        font-size: 72px;
+    }
+
+    #io_banner p{
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+
+    #start_item{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .item {
+        flex-grow: 1;
+        flex-basis: calc((100% - 80px) / 4);
+        margin: 10px;
+    }
+
+    .deve_focus {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .focus {
+        flex-grow: 1;
+        flex-basis: calc((100% - 40px) / 2);
+        margin: 10px;
+
+    }
+
+    .news_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .news {
+        flex-grow: 1;
+        flex-basis: calc((100% - 60px) /3);
+        margin: 10px;
+
+    }
+
+    #new_android {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    #new_android img{
+        margin-left: 10px;
+        margin-right: 20px;
+        width: calc((100% - 80px) / 2);
+    }
+
+    #android_studio {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+
+    #other_activity {
+        flex-direction: row;
+    }
+
+    .activity {
+        flex-basis: calc((100% - 70px) / 3);
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .social_media_container{
+        flex-direction: row;
+    }
+
+    .social_media {
+        flex-basis: calc((100% - 80px) / 4);
+        margin: 10px;
+    }
+
+    .footer_link {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .link {
+        flex-basis: calc((100% - 60px) / 3);
+        margin: 10px;
+    }
+
+    .footer_nav, /*Need modification*/
+    #footer_nav_link {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #footer_nav_link img,
+    #footer_nav_link a {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 50px;
+    }
+
+
+    #footer_last_content {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+ 
+    #footer_last_content p{
+        margin-right: auto;
+    }
+
+    #sub { 
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    #footer_language{
+        margin-top: 0;
+    }
 }
