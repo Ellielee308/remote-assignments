@@ -1,0 +1,574 @@
+/* Main style */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+}
+
+#trigger {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    height: 45px;
+    background-color: transparent; /* Set the color of trigger button to transparent*/
+}
+
+.trigger_div {
+    width: 30px;
+    height: 1.5px;
+    background-color: black;
+    margin: 8px 0;  /* Not sure why sometimes one of divs looks thicker*/
+}
+
+.logo {
+    width: 180px;
+}
+
+.menu {
+    display: none;
+    flex: 1;
+}
+
+.topbar_item input{
+    display: none;
+}
+
+#topbar .logo {
+    margin-right: auto;
+}
+
+#language {
+    display:none;
+}
+
+#topbar #search_logo {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+#more_info {
+    height: 30px;
+    width: 30px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    border: 1px solid grey;
+}
+
+#google_user {
+    height: 30px;
+    width: 30px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    border: 1px solid grey;
+}
+
+#small_banner h3{
+    padding: 20px 16px;
+    margin-top: 60px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #1a73e7;
+    color: white;
+    font-size: 14px;
+}
+
+#io_banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: calc (100vh - 60px); 
+    /* Still need to get the height of the small banner*/
+    align-items: center;
+    margin: 0;
+    background-color: #EDEEED;
+}
+
+#io_banner h1{
+    font-size: 70px;
+    margin-bottom: 0;
+    color: black;
+    text-align: center;
+}
+
+#io_banner p {
+    padding: 15px 20px;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: black;
+    text-align: center;
+}
+
+#io_banner button {
+    display: block;
+    border: 0;
+    padding: 5px 10px;
+    width: 200px;
+    border-radius: 25px;
+    background-color: #1a73e7;
+    text-align: center;
+}
+
+#io_banner button a {
+    color: white;
+    text-decoration: none;
+}
+
+#io_banner img {
+    width: 45%;
+    margin-top: auto;
+}
+
+#interest {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding:20px 40px;
+    background-color: #dedfe0;
+}
+
+.select_interest {
+    display: flex;
+
+}
+
+.select_interest p {
+    margin-right: 10px;
+}
+
+.select_interest #info {
+    border: 1px solid #65686D;
+    border-radius: 50%;
+    padding-right: 7px;
+    padding-left: 7px;
+    text-align: center;
+    color: #65686D;
+}
+
+#interest #create_account {
+    text-decoration: none;
+    color: #1f76e7;
+}
+
+.interest_filter {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.interest_filter_item {
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 5px 15px;
+    background-color: white;
+    color: black;
+
+}
+
+/* Need to resize */
+.interest_content {
+    display: flex;
+    justify-content: space-between
+}
+
+.interest_item {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 80vw;
+    padding: 8px 15px 0px 15px;
+    border: 0.5px solid grey;
+    background-color: white;
+    border-radius: 25px;
+    margin: 10px;
+}
+/* Need to resize */
+
+#start_today {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+#start_today h2 {
+    font-size: 42px;
+    text-align: center;
+}
+
+#start_item {
+    display: flex;
+    flex-direction: column;
+}
+
+#start_item .item {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px grey;
+    border-radius: 5px;
+    flex-grow: 1;
+    width: 80vw;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#start_item img {
+    margin:auto;
+}
+
+#view_all {
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #1a73e7;
+}
+
+#view_all a {
+    text-decoration: none;
+    color: white;
+}
+
+#develop_for {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+#develop_for h2 {
+    font-size: 42px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#develop_p{
+    font-size: 36px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.deve_focus {
+    display: flex;
+    flex-direction: column;
+}
+
+.focus {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    flex-grow: 1;
+    width: 80vw;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.focus img {
+    align-self: center;
+}
+
+.focus button {
+    align-self: flex-start;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #1a73e7;
+}
+.focus button a {
+    text-decoration: none;
+    color: white;
+}
+
+#trending_news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#trending_news_title { /*Should be at the left side*/
+    font-size: 24px;
+    color: black;
+}
+
+.news_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    flex-grow: 1;
+    width: 80vw;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.news button {
+    align-self: flex-start;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #1a73e7;
+}
+
+.news button a {
+    text-decoration: none;
+    color: white;   
+}
+
+#new_android {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+    background-color: #F1f3f4;
+}
+
+#new_android img {
+    width: 100%;
+}
+
+#new_android h4 {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+
+#new_android h3 {
+    font-size: 50px;
+    margin-top: 0;
+}
+
+#android_studio button {
+    align-self: flex-start;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #1a73e7;
+}
+
+#android_studio button a {
+    text-decoration: none;
+    color: white;  
+}
+
+#other_activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    background-color: #E8F0FE;
+    justify-content: center;
+}
+
+.activity {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    width: 80vw;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.activity h3 a{
+    font-weight: lighter;
+    color:#1a73e7;
+    text-decoration: none;
+}
+
+.activity button {
+    align-self: flex-start;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #1a73e7;
+}
+
+.activity button a{
+    color:white;
+    text-decoration: none;
+}
+
+#follow_social {
+    display: flex;
+    flex-direction: column;
+}
+
+#follow_social h2 {
+    text-align: center;
+    font-size: 42px;
+    color: black;
+}
+
+.social_media_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social_media {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    width: 80vw;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.social_media button{
+    align-self: flex-start;
+    padding: 10px 15px;
+    border: 1px solid #65686D;
+    border-radius: 5px;
+    background-color: transparent
+}
+
+.social_media a {
+    text-decoration: none;
+    color:#1a73e7;
+}
+
+footer {
+    border-top: 1px solid grey;
+    margin-bottom: 15px;
+}
+
+.footer_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_link .link {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 80vw;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+
+.footer_link .link ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    line-height: 2em;
+}
+
+.footer_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer_nav_link img {
+    height: 3em;
+    align-self: flex-start;
+}
+
+#footer_nav_link {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 80vw;
+    margin-top: 0;
+    text-align: left;
+    line-height: 2em;
+}
+
+#footer_nav_link a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer_last{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer_last_content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: flex-start;
+    width: 80vw;
+    margin-top: 0;
+    text-align: left;
+}
+
+.footer_last p a {
+    text-decoration: none;
+    color: black;
+}
+
+#newsletter {
+    display: flex;
+    justify-self: flex-start;
+}
+
+.footer_last #sub {
+    display: inline-block;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    margin-left: 15px;
+    background-color: #1f76e7;
+}
+
+.footer_last #sub a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer_language {
+
+    margin-top: 15px;
+}
