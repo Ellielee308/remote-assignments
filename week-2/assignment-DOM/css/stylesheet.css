@@ -1,0 +1,191 @@
+/* main style */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+}
+
+header {
+    height: 45px;
+    padding: 10px 20px;
+    background-color: #EEE;
+    color: black;
+}
+
+header h3 {
+    font-weight: normal;
+}
+
+#trigger {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    height: 45px;
+    background-color: transparent; /* Set the color of trigger button to transparent*/
+}
+
+#trigger:hover {
+    cursor: pointer;
+}
+
+.trigger_item {
+    width: 30px;
+    height: 1.5px;
+    background-color: black;
+    margin: 8px 0;  /* Not sure why sometimes one of divs looks thicker*/
+  }
+  
+#floating_menu {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    align-items: flex-start;
+    justify-content: space-between;
+    right: 0px;
+    top: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: #FFF;
+    box-shadow: 0px 0px 5px 0px #a3afbe;
+}
+
+#floating_menu_list {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.floating_item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#floating_close {
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+}
+
+#floating_close:hover {
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+}
+
+.item {
+    padding-left: 30px;
+    padding-right: 30px;
+    list-style: none;
+}
+
+#welcome {
+    margin: 0;
+    padding: 100px 50px;
+    height: 250px;
+    background-color: #CDE;
+    color: black;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#secondarytitle {
+    padding: 30px 30px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: black;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.content {
+    margin: 0 20px;
+}
+
+.box {
+    margin-top: 15px;              /*May need to resize*/
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    height: 250px;
+    background-color: #8B98A8;
+    text-align: center;
+    list-style: none;
+}
+
+#call {
+    display: block;
+    border: 0;
+    padding: 18px 15px;
+    margin: 20px auto;
+    background-color: #CDE;
+    text-align: center;
+}
+
+#call:hover {
+    cursor: pointer;
+}
+
+
+/* Flexbox */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#section {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex-grow: 1;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 500px) {
+    .content {
+        flex-direction: row;
+    }
+    .box {      
+        flex-basis: calc((100% - 60px) / 2); /*(100vw - 20px - 60 px)/2 not working*/
+        margin: 20px 15px 20px 15px;
+    }
+}
+
+@media screen and (min-width: 800px){
+    header {
+        display: flex;
+    }
+
+   #trigger {
+    display: none;
+
+   } 
+   .menu {
+    display: flex;
+    flex: 2;
+   }
+}
+
+@media screen and (min-width: 1200px){
+    .content {
+        max-width: 1200px;
+        align-self: center;
+    }
+    .box {
+        width: 550px;
+    }
+}
