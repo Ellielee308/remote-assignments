@@ -15,11 +15,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/getData", (req, res) => {
-  const positive_Integer = Number(req.query.number);
+  const positiveInteger = Number(req.query.number);
   if (!req.query.number) {
     res.send("Lack of Parameter");
-  } else if (Number.isInteger(positive_Integer) && positive_Integer > 0) {
-    const result = ((1 + positive_Integer) * positive_Integer) / 2;
+  } else if (Number.isInteger(positiveInteger) && positiveInteger > 0) {
+    const result = ((1 + positiveInteger) * positiveInteger) / 2;
     res.send(`${result}`);
   } else {
     res.send("Wrong Parameter");

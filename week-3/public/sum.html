@@ -25,7 +25,7 @@ document.querySelector("button").addEventListener("click", ()=>{
 })
 
 function displayAnswer(number){
-    const url = `../getData?number=${number}`;
+    const url = `/getData?number=${number}`;
     fetch(url)
     .then((response) => {
         return response.text();
