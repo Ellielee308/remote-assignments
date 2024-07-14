@@ -10,17 +10,10 @@ const ContentSection = () => {
     <div id="section">
       <h2 id="secondarytitle">Section Title</h2>
       <Content />
-      <button
-        id="call"
-        onClick={() =>
-          setMoreContent(() => {
-            return !moreContent;
-          })
-        }
-      >
+      <button id="call" onClick={() => setMoreContent(!moreContent)}>
         Call to Action
       </button>
-      {moreContent ? <Content /> : null}
+      {moreContent && <Content />}
     </div>
   );
 };

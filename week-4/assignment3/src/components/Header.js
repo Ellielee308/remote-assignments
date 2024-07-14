@@ -5,6 +5,7 @@ import FloatingMenu from "./FloatingMenu";
 
 const Header = () => {
   const [showFloatingMenu, setShowFloatingMenu] = useState(false);
+  const items = ["Item 1", "Item 2", "Item 3", "Item 4"];
 
   return (
     <header>
@@ -12,10 +13,9 @@ const Header = () => {
       <nav>
         <Trigger onClick={() => setShowFloatingMenu(!showFloatingMenu)} />
         <ul className="menu">
-          <li className="item">Item 1</li>
-          <li className="item">Item 2</li>
-          <li className="item">Item 3</li>
-          <li className="item">Item 4</li>
+          {items.map((item) => (
+            <li className="item">{item}</li>
+          ))}
         </ul>
         {showFloatingMenu ? (
           <FloatingMenu

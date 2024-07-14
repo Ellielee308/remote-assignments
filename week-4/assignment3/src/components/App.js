@@ -7,7 +7,7 @@ import Main from "./Main";
 
 const App = () => {
   return (
-    <div>
+    <div className="assignment3">
       <Header />
       <Main />
     </div>
