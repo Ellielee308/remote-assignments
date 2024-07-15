@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 import App from "./components/App";
 import AppAssignment4 from "./components_assignment4/AppAssignment4";
